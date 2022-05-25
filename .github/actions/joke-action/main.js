@@ -1,5 +1,4 @@
-
-import {getJoke} from './joke'
+const getJoke = require("./joke").default;
 
 const core = require("@actions/core");
 
