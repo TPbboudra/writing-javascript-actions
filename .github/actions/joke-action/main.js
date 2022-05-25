@@ -1,11 +1,11 @@
-const getJoke = require("./joke").default;
+import getJoke from "./joke";
 
-const core = require("@actions/core");
+import { setOutput } from "@actions/core";
 
 async function run() {
   const joke = await getJoke();
   console.log(joke);
-  core.setOutput("joke-output", joke);
+  setOutput("joke-output", joke);
 }
 
 run();
