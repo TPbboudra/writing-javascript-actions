@@ -1,4 +1,6 @@
-const getJoke = require("./joke");
+
+import {getJoke} from './joke'
+
 const core = require("@actions/core");
 
 async function run() {
