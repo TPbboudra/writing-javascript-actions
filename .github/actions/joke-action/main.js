@@ -1,6 +1,6 @@
 import getJoke from "./joke.js";
 
-// import { setOutput } from "@actions/core";
+import { setOutput } from "@actions/core";
 
 async function run() {
   const joke = await getJoke();
