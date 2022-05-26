@@ -6,15 +6,15 @@ async function run() {
       const issueTitle = getInput("issue-title");
       const jokeBody = getInput("joke");
       const token = getInput("repo-token");
-  
+      console.log(token)
       const octokit = getOctokit(token);
   
-      // const newIssue = await octokit.rest.issues.create({
-      //     repo: context.repo.repo,
-      //     owner: context.repo.owner,
-      //     title: issueTitle,
-      //     body: jokeBody
-      // });
+      const newIssue = await octokit.rest.issues.create({
+          repo: context.repo.repo,
+          owner: context.repo.owner,
+          title: issueTitle,
+          body: jokeBody
+      });
     } catch (err) {
         setFailed(err.message);
     }
